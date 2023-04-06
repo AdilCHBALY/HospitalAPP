@@ -1,0 +1,199 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+body{
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.app{
+    height: 100vh;
+    background-color: #f3f3f3;
+
+    .Header{
+        background-color: green;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        padding: 0 20px;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        
+
+        .logo{
+            background-color: white;
+            padding: 5px;
+            border-radius: 15px;
+            cursor: pointer;
+
+            .logocontent{
+                color: black;
+                font-size: 24px;
+            }
+        }
+
+        .urls{
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 30px;
+
+                li{
+                    list-style: none;
+
+                    .links{
+                        color: white;
+                        border-bottom: 1px solid green;
+                        transition: all .44s ease-in-out;
+
+                        &:hover{
+                            border-bottom: 1px solid white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .Main{
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        flex-direction: column;
+        height: calc(100% - 60px);
+        font-size: 36px;
+        span{
+            color: green;
+            font-size: 40px;
+            font-weight: bold;
+        }
+    }
+
+    .Patient,.Rdv,.Doctor{
+        width: 1140px;
+        margin: auto;
+        padding: 20px;
+        
+
+        .form{
+            position: absolute;
+            top: 60px;
+            left: 0;
+            height: calc(100% - 60px);
+            width: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.3);
+            z-index: 99;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            &__content{
+                background-color: white;
+                border-radius: 15px;
+                padding: 30px;
+                min-width: 500px;
+                min-height: 450px;
+                position: relative;
+                .closebtn{
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    cursor: pointer;
+                    transform: scale(1);
+                    transition: all .44s ease-in-out;
+
+
+                    &:hover{
+                        color: red;
+                        transform: scale(1.2);
+                    }
+                }
+
+
+                form{
+                    height: 400px;
+                    flex-direction: column;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 50px;
+
+                    .form__groupe{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+                        label{
+                            font-size: 14px;
+                        }
+                        input{
+                            width: 80%;
+                            padding: 10px;
+                            border-radius: 15px;
+                        }
+                        .addbtn{
+                            width: 100%;
+                            background-color: green;
+                            border: 1px solid transparent;
+                            padding: 10px 20px;
+                            border-radius: 20px;
+                            cursor: pointer;
+                            color: white;
+                            font-family: 'Fira Sans', sans-serif;   
+                            transition: all .21s ease-in-out;
+                            &:hover{
+                                background-color: white;
+                                border: 1px solid green;
+                                color : green;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+
+            .SearchInput{
+                width: 50%;
+            }
+
+            &__func{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                .AddBtn{
+                    background-color: green;
+                    border: 1px solid white;
+                    color: white;
+                    transition: all .21s ease-in-out;
+
+                    &:hover{
+                        border: 1px solid green;
+                        background-color: white;
+                        color: green;
+                    }
+                }
+            }
+        }
+    }
+}
+
